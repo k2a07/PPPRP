@@ -1,0 +1,11 @@
+FROM python:3.9
+
+RUN pip install flask requests
+
+WORKDIR /app
+COPY web_app.py /app
+
+
+EXPOSE 7777
+
+CMD ["python", "web_app.py"]

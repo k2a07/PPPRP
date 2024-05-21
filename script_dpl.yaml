@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scr
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scr
+  template:
+    metadata:
+      labels:
+        app: scr
+    spec:
+      containers:
+      - name: scr
+        image: kirillacharya/scr
