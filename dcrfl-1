@@ -1,0 +1,10 @@
+FROM python:3.9
+
+RUN pip install requests
+
+WORKDIR /app
+COPY stats_to_file.py /app
+
+EXPOSE 7778
+
+CMD ["python", "stats_to_file.py"]
